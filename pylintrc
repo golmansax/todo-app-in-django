@@ -1,0 +1,5 @@
+[MESSAGES CONTROL]
+# C0111 Missing docstring
+
+[BASIC]
+no-docstring-rgx=__.*__|_.*
