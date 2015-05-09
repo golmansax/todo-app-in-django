@@ -1,5 +1,2 @@
 [MESSAGES CONTROL]
-# C0111 Missing docstring
-
-[BASIC]
-no-docstring-rgx=__.*__|_.*
+disable=missing-docstring,locally-disabled

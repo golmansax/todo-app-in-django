@@ -3,6 +3,4 @@ language: python
 python:
 - 2.7
 script:
-- pylint manage.py
-- pylint todos
-- pylint my_project
+- make pylint
