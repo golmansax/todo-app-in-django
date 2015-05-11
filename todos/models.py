@@ -5,5 +5,5 @@ class Todo(models.Model):
     due_date = models.DateTimeField('due date')
     completed_date = models.DateTimeField('completed date')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
