@@ -2,7 +2,10 @@ sudo: false
 language: python
 python:
 - 3.4
-cache: pip
+cache:
+  pip: true
+  directories:
+  - node_modules
 install:
 - npm install
 - pip install -r requirements/development.txt
