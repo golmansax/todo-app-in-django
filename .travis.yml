@@ -4,6 +4,8 @@ python:
 - 3.4
 cache: pip
 install:
+- npm install
 - pip install -r requirements/development.txt
 script:
 - make pylint
+- ./manage.py test
