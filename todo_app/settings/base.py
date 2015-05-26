@@ -26,7 +26,7 @@ def get_env_variable(var_name):
     try:
         return os.environ[var_name]
     except KeyError:
-        error_msg = "Set the %s environment variable" % var_name
+        error_msg = 'Set the %s environment variable' % var_name
         raise ImproperlyConfigured(error_msg)
 
 SECRET_KEY = get_env_variable('SECRET_KEY')
@@ -63,7 +63,7 @@ ROOT_URLCONF = 'todo_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(PROJECT_DIR, "templates")],
+        'DIRS': [os.path.join(PROJECT_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,7 +109,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_DIR, "static"),
+    os.path.join(PROJECT_DIR, 'static'),
 )
 
 STATICFILES_FINDERS = (
