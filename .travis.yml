@@ -12,6 +12,7 @@ before_install:
 install:
 - npm install
 - pip install -r requirements/development.txt
+- ./manage.py bower install
 script:
 - make pylint
 - ./manage.py test
