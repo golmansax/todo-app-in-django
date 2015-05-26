@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.core.urlresolvers import reverse
 
+
 class TestHomePage(TestCase):
 
     def test_uses_index_template(self):
