@@ -1,6 +1,7 @@
 -r base.txt
 
 flake8==2.4.1
+flake8-import-order==0.6
 flake8-quotes==0.0.1
 pep8-naming==0.2.2
 pylint==1.4.3
