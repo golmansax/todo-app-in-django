@@ -17,6 +17,7 @@ script:
 - make pylint
 - make flake8
 - ./manage.py test
+- make coverage
 env:
   global:
     - DJANGO_SETTINGS_MODULE="todo_app.settings.development"
