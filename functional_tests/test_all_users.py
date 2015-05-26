@@ -23,5 +23,14 @@ class HomeNewVisitorTest(StaticLiveServerTestCase):
         h1 = self.browser.find_element_by_tag_name("h1")
         self.assertEqual(h1.value_of_css_property("color"), "rgba(34, 34, 34, 1)")
 
+    def browser_content(self):
+        return self.browser.find_element_by_tag_name("body").text
+
+    def test_home_files(self):
+        self.browser.get(self.live_server_url + "/robots.txt")
+        self.assertNotIn("not found", self.browser_content().lower())
+        self.browser.get(self.live_server_url + "/humans.txt")
+        self.assertNotIn("not found", self.browser_content().lower())
+
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
