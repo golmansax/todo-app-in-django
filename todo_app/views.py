@@ -1,11 +1,16 @@
-from django.shortcuts import render
 import datetime
+
+from django.shortcuts import render
 from django.utils.timezone import now
 
 
 def home(request):
     today = datetime.date.today()
-    return render(request, 'todo_app/index.html', {'today': today, 'now': now()})
+    return render(
+        request,
+        'todo_app/index.html',
+        {'today': today, 'now': now()},
+    )
 
 
 def home_files(request, filename):
