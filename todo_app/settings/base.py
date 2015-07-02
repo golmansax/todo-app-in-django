@@ -98,11 +98,11 @@ DATABASES = {
 LANGUAGE_CODE = 'en-us'
 LANGUAGES = (
     ('en', _('English')),
-    ('ca', _('Catalan')),
+    ('es', _('Spanish')),
 )
 
 LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'locale'),
+    os.path.join(PROJECT_DIR, 'locale'),
 )
 
 TIME_ZONE = 'UTC'

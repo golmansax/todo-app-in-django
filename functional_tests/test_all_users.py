@@ -34,5 +34,12 @@ class HomeNewVisitorTest(StaticLiveServerTestCase):
         self.browser.get(self.live_server_url + "/humans.txt")
         self.assertNotIn("not found", self.browser_content().lower())
 
+    def test_internationalization(self):
+        for lang, h1_text in [('en', 'Hello, World'), ('es', 'Hola, Mundo')]:
+            activate(lang)
+            self.browser.get(self.get_full_url("home"))
+            h1 = self.browser.find_element_by_tag_name("h1")
+            self.assertEqual(h1.text, h1_text)
+
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
