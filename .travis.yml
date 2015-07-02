@@ -15,7 +15,7 @@ install:
 - pip install -r requirements/development.txt
 - ./manage.py bower install
 before_script:
-- ./manage.py makemessages
+- ./manage.py compilemessages
 script:
 - make pylint
 - make flake8
